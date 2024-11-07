@@ -1,0 +1,208 @@
+body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+/* الشريط العلوي المتحرك */
+.top-bar {
+    background-color: red;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+}
+
+.scrolling-text {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll-text 10s linear infinite;
+}
+
+.spp{
+    margin: 250px;
+}
+
+@keyframes scroll-text {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* النافبار */
+.navbar {
+    background-color: #1a1a2e; /* اللون الأزرق الغامق */
+    color: white;
+    padding: 15px 0;
+    font-family: Arial, sans-serif;
+    position: sticky; /* يجعل الشريط ثابتاً عند التمرير */
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.logo img {
+    width: 50px; /* عرض الصورة */
+    height: auto; /* المحافظة على نسبة الطول */
+    max-height: 50px; /* الحد الأقصى لارتفاع الصورة */
+}
+
+.nav-links a {
+    color: rgb(255, 255, 255);
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #f0f0f0; /* لون أفتح عند التمرير */
+}
+
+.language-toggle button {
+    background-color: #1a1a2e;
+    color: white;
+    border-radius: 0 10px;
+    border: 1px solid white;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.language-toggle button:hover {
+    background-color: #f0f0f0;
+    color: #1a1a2e;
+}
+
+
+/* قسم المنتجات */
+.section {
+    padding: 50px;
+    text-align: center;
+}
+
+.products-section {
+    padding: 40px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.products-section h2 {
+    color: #1a1a2e; /* اللون الأزرق الغامق */
+    margin-bottom: 20px;
+}
+
+.product {
+    display: inline-block;
+    width: 250px;
+    margin: 15px;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.product:hover {
+    transform: scale(1.05); /* تكبير العنصر عند التحويم */
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.product h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.product .price {
+    color: #e63946; /* لون مميز للسعر */
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* حاوية زر الواتساب */
+.whatsapp-container {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* نص تواصل معنا */
+.whatsapp-text {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px; /* المسافة بين النص والزر */
+    font-weight: bold;
+}
+
+/* تصميم زر الواتساب */
+.whatsapp-button {
+    background-color: #25D366;
+    color: white;
+    font-size: 35px;
+    padding: 8px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: transform 0.3s;
+}
+
+/* تأثير النبض */
+.pulsing {
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* الشريط السفلي */
+.footer {
+    background-color: #141432;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.social-icons a {
+    color: white;
+    margin: 0 10px;
+    font-size: 20px;
+}
